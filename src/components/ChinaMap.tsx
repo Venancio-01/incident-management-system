@@ -55,7 +55,7 @@ function ChinaMap() {
     ]
   }
 
-  return <ReactEcharts option={options} style={{ height: '600px', width: '100%' }} />
+  return <ReactEcharts option={options} style={{ height: '500px', width: '100%' }} />
 }
 
 export default ChinaMap

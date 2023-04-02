@@ -1,9 +1,10 @@
-import { Outlet } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+import router from './router'
 
 function App() {
   return (
-    <div className="w-h-full bg-[#031d4c]">
-      <Outlet></Outlet>
+    <div className="h-screen bg-[url(@/assets/images/背景.png)] bg-center">
+      <RouterProvider router={router} />
     </div>
   )
 }

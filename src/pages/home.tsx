@@ -1,21 +1,29 @@
 import ChinaMap from '@/components/ChinaMap'
 import BasePanel from '@/components/BasePanel'
+import PieChart from '@/components/PieChart'
+import LineChart from '@/components/LineChart'
 
 function Index() {
   return (
-    <div className="">
-      <div className="h-[70px] text-white text-center leading-[70px] text-xl">事件智慧大数据管理系统</div>
-      <div className="grid grid-cols-[492px_1fr_492px] grid-rows-[1fr_1fr_295px] gap-4 px-10 py-4 text-white">
-        <BasePanel>左上</BasePanel>
+    <div className="flex-col">
+      <div className="flex-1 grid grid-cols-[492px_1fr_492px] grid-rows-[1fr_auto_295px] gap-4 px-10 py-4 text-white">
+        <BasePanel title="本月事故类型统计">
+          <PieChart></PieChart>
+        </BasePanel>
         <div className="row-span-2">
-          {/* <div className="h-[600px] overflow-hidden"> */}
           <ChinaMap></ChinaMap>
-          {/* </div> */}
         </div>
-        <BasePanel>右上</BasePanel>
-        <BasePanel className="row-span-2">左下</BasePanel>
-        <BasePanel className="row-span-2">右下</BasePanel>
-        <BasePanel>中下</BasePanel>
+        <BasePanel title="本月事故统计">本月事故统计</BasePanel>
+        <BasePanel className="row-span-2" title="近期事故通报">
+          近期事故通报
+        </BasePanel>
+        <BasePanel className="row-span-2" title="本月防范事故建议">
+          <span>本月防范事故建议</span>
+          <span>111</span>
+        </BasePanel>
+        <BasePanel title="事故统计">
+          <LineChart></LineChart>
+        </BasePanel>
       </div>
     </div>
   )
