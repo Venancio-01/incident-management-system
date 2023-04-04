@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'SourceHan';
   src: url('@/assets/fonts/SourceHanSansCN-VF.ttf');
@@ -8,3 +12,26 @@
 html {
   @apply font-sans text-normal
 }
+
+.nav-button {
+  border: 2px ridge #1165b5;
+  border-bottom: none;
+}
+
+
+/* .nav-button:hover {
+  box-shadow: inset 0px 0px 25px #1165b5;
+} */
+
+
+.front {
+  transform: perspective(10px) rotateY(-30deg);
+}
+
+.end {
+  transform: perspective(10px) rotateY(30deg);
+}
+
+/* .ant-form-item-label label {
+  @apply !text-normal;
+} */

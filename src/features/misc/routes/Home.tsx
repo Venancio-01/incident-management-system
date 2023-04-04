@@ -3,9 +3,9 @@ import BasePanel from '@/components/BasePanel'
 import PieChart from '@/components/PieChart'
 import LineChart from '@/components/LineChart'
 
-function Index() {
+export const Home = () => {
   return (
-    <div className="flex-col">
+    <div className="flex flex-col">
       <div className="flex-1 grid grid-cols-[492px_1fr_492px] grid-rows-[1fr_auto_295px] gap-4 px-10 py-4 text-white">
         <BasePanel title="本月事故类型统计">
           <PieChart></PieChart>
@@ -28,5 +28,3 @@ function Index() {
     </div>
   )
 }
-
-export default Index
